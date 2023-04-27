@@ -28,8 +28,6 @@ class Game
     end
   end
 
-  private
-
   def play_turn
     @show.prompt_player(@current_player)
     position = gets.chomp.to_i
