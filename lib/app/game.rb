@@ -30,7 +30,10 @@ class Game
 
   def play_turn
     @show.prompt_player(@current_player)
-    position = gets.chomp.to_i
+    while position = gets.chomp.to_i
+      puts "Saisie invalide !"
+      break if (position > 0 && position < 10)
+    end
     if valid_move?(position)
       make_move(position)
       @board.display

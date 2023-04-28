@@ -7,6 +7,7 @@ class Board
   end
 
   def display
+    system('cls') || system('clear')
     puts "     1     2    3"  
     puts "  A   #{@grid[1].value} || #{@grid[2].value} || #{@grid[3].value} "
     puts "    ====||===||===="
